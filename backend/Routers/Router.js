@@ -18,7 +18,7 @@ router.get('/funcionarios', authenticateToken, isManager, FuncionarioController.
 
 router.get('/funcionarios/:Cpf', authenticateToken, isManager, FuncionarioController.show);
 
-router.get('/funcionarios/like/:Cpf', authenticateToken, isManager, FuncionarioController.findLikeCpf);
+router.get('/funcionarios/like/:Cpf', authenticateToken, FuncionarioController.findLikeCpf);
 
 router.post('/funcionarios', authenticateToken, isManager, FuncionarioController.store);  // Rota para adicionar funcionário
 

@@ -56,14 +56,17 @@ class FuncionarioController {
   
 
   async update(req, res) {
+      console.log(req.body)
       const Cpf  = req.params.Cpf;
       const Nome = req.body.Nome;
       const Telefone = req.body.Telefone; 
       const Endereco = req.body.Endereco;
       const Cargo = req.body.Cargo;
       const DataNascimento = req.body.DataNascimento;
+      const DataAdmissao = req.body.DataAdmissao;
+      const Sexo = req.body.Sexo;
       const Salario = parseFloat(req.body.Salario);
-      const Funcionario = await FuncionarioModel.update({ Cpf, Nome, Telefone, Endereco, Cargo, Salario, DataNascimento});
+      const Funcionario = await FuncionarioModel.update({ Cpf, Nome, Telefone, Endereco, Cargo, Salario, DataNascimento, Sexo, DataAdmissao});
       res.json(Funcionario);
   
 }

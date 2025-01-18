@@ -66,7 +66,9 @@ class FuncionarioModel {
         Endereco: Funcionario.Endereco,
         Cargo: Funcionario.Cargo,
         DataNascimento: Funcionario.DataNascimento,
-        Salario: Funcionario.Salario
+        DataAdmissao: Funcionario.DataAdmissao,
+        Salario: Funcionario.Salario,
+        Sexo: Funcionario.Sexo
       }
     })
     return funcionarios;
